@@ -6,18 +6,20 @@ var pkg = require('./package.json');
 var banner = ['/**',
 	' * <%= pkg.name %> - <%= pkg.description %>',
 	' * @version v<%= pkg.version %>',
+	' * @author <%= pkg.author %>',
 	' * @link <%= pkg.homepage %>',
 	' * @license <%= pkg.license %>',
 	' */',
 	''
 ].join('\n');
 
-gulp.task('clean', function() {
+
+gulp.task('clean', function () {
 	return gulp.src('dist', { read: false })
 		.pipe(plugins.clean());
 });
 
-gulp.task('script', ['clean'], function() {
+gulp.task('script', ['clean'], function () {
 	gulp.src('src/**.js')
 		.pipe(plugins.concat('echarts-angular.js'))
 		.pipe(plugins.header(banner, { pkg: pkg }))
@@ -29,16 +31,16 @@ gulp.task('script', ['clean'], function() {
 
 gulp.task('build', ['script']);
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
 	gulp.watch('src/*.js', ['script']);
 });
 
-gulp.task('script-watch', ['script'], function(done) {
+gulp.task('script-watch', ['script'], function (done) {
 	browserSync.reload();
 	done();
 });
 
-gulp.task('serve', ['script'], function() {
+gulp.task('serve', ['script'], function () {
 	browserSync.init({
 		server: {
 			baseDir: "./"
@@ -48,5 +50,3 @@ gulp.task('serve', ['script'], function() {
 	gulp.watch('src/*.js', ['script-watch']);
 	gulp.watch("*.html").on('change', browserSync.reload);
 });
-
-gulp.task('default', ['build']);
