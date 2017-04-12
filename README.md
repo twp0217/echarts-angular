@@ -18,9 +18,9 @@ bower install echarts-angular --save
 ### 项目引入`echarts`、`angular`和`echarts-angular`
 
 ```
-<script src="bower_components/echarts/dist/echarts.min.js"></script>
-<script src="bower_components/angular/angular.min.js"></script>
-<script type="text/javascript" src="dist/echarts-angular.min.js"></script>
+<script type="text/javascript" src="bower_components/echarts/dist/echarts.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/echarts-angular/dist/echarts-angular.min.js"></script>
 ```
 
 ### 项目使用
@@ -47,7 +47,7 @@ app.controller('demo', ['$scope', function($scope){
 			data: [5, 20, 36, 10, 10, 20]
 		}]
 	};
-}])
+}]);
 ```
 
 - html
@@ -58,3 +58,7 @@ app.controller('demo', ['$scope', function($scope){
 </div>
 ```
 
+## 支持
+
+- 如果项目对你有帮助，请点颗星:star:
+- 有问题，请提交 [issue](https://github.com/twp0217/echarts-angular/issues)
