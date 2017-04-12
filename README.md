@@ -3,19 +3,22 @@
 ## 简介
 > angular directive for ECharts(基于AngularJS的echarts指令)
 
+## 快速链接
+- [文档](https://github.com/twp0217/echarts-angular/wiki)
+
 ## 环境
 - AngularJS >=1.2.0
 - ECharts >=3.4.0
 
 ## 安装
 
-### 安装依赖
+#### 安装依赖
 
 ```
 bower install echarts-angular --save
 ```
 
-### 项目引入`echarts`、`angular`和`echarts-angular`
+#### 项目引入`echarts`、`angular`和`echarts-angular`
 
 ```
 <script type="text/javascript" src="bower_components/echarts/dist/echarts.min.js"></script>
@@ -23,7 +26,7 @@ bower install echarts-angular --save
 <script type="text/javascript" src="bower_components/echarts-angular/dist/echarts-angular.min.js"></script>
 ```
 
-### 项目使用
+#### 项目使用
 
 - controller
 ```
